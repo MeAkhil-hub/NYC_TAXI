@@ -1,0 +1,13 @@
+{
+	"name": "LS_NYC_WEB",
+	"properties": {
+		"description": "linked service between nyc website and data factory",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://d37ci6vzurychx.cloudfront.net",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
