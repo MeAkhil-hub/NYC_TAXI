@@ -1,0 +1,27 @@
+{
+	"name": "ds_nyc_source_raw_greater9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_NYC_WEB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_monthgreater9": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "trip-data/green_tripdata_2023-@{dataset().p_monthgreater9}.parquet",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
